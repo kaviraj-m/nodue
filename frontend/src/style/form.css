@@ -1,0 +1,88 @@
+/* General Styles */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Prevents overflow from the body */
+}
+
+.form-container {
+    max-width: 100%;
+    height: 85vh;
+    /* Occupies the full height of the viewport */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    /* Enables vertical scrolling within the container */
+}
+
+.form-container-light {
+    background-color: #f7f7f7;
+    /* Light theme color */
+}
+
+.form-container-dark {
+    background-color: #1a1b1e;
+    /* Dark theme color */
+}
+
+.form-title {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.bonafide-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-button {
+    margin-top: 20px;
+    padding: 10px;
+    height: 50px;
+    background-color: grey;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-button:hover {
+    background-color: #a4a1a1;
+}
+
+/* Dark Theme Overrides */
+.form-container-dark .form-title {
+    color: #f7f7f7;
+}
+
+.form-container-dark .MuiOutlinedInput-root {
+    background-color: #333;
+    color: #f7f7f7;
+    border-color: #444;
+}
+
+.form-container-dark .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1e90ff;
+    /* Dark theme focus color */
+}
+
+.form-button {
+    background-color: #333;
+}
+
+.form-button:hover {
+    background-color: #555;
+}

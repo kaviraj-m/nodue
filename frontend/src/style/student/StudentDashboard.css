@@ -1,0 +1,90 @@
+/* Full height layout */
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Toolbar and AppBar styling */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1400;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    /* Change AppBar color to white */
+    color: black;
+    /* Change text color to black */
+}
+
+.title {
+    flex-grow: 1;
+    color: black;
+    /* Ensure title text is black for visibility */
+}
+
+.menuButton {
+    display: none;
+    color: black;
+    /* Ensure menu button icon is black for visibility */
+}
+
+/* Drawer styles */
+.drawer {
+    width: 240px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    height: calc(100% - 64px);
+    overflow: auto;
+}
+
+.drawerPaper {
+    z-index: 1200;
+    width: 240px;
+    position: relative;
+    background-color: #fff;
+}
+
+/* Main content area */
+.content {
+    flex-grow: 1;
+    padding: 16px;
+    margin-left: 240px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive design for mobile view */
+@media (max-width: 600px) {
+    .menuButton {
+        display: inline-flex;
+    }
+
+    .drawer {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .drawerOpen .drawer {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 240px;
+    }
+}
